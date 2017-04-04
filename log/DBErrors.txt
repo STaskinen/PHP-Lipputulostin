@@ -1,0 +1,2 @@
+Connection: SQLSTATE[HY000] [2002] No route to host
+Connection: SQLSTATE[HY000] [2002] No route to host
