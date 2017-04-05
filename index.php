@@ -1,5 +1,7 @@
 <?php include("includes/iheader.php");
-echo $_SESSION['message']
+echo $_SESSION['message'];
+//echo viitenumero(45354543);
+echo random();
 ?>
 <!DOCTYPE html>
 
@@ -24,7 +26,7 @@ echo $_SESSION['message']
     <input type="submit" value="Get ticket" name="save">
 </form><br/>
 
-<a href="print.php"><button type="button">Click me!</button></a> 
+<!-- <a href="print.php"><button type="button">Click me!</button></a> -->
 <script src="js/scripts.js"></script>
 
 </body>

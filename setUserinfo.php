@@ -4,13 +4,14 @@ if(isset($_POST["save"])) {
     $data['firstname'] = $_POST['givenFirstname'];
     $data['lastname'] = $_POST['givenLastname'];
     $data['email'] = $_POST['givenMail'];
+    $data['referencenum'] = random();
     $_SESSION['fName'] = $_POST['givenFirstname'];
     $_SESSION['lName'] = $_POST['givenLastname'];
     $_SESSION['Mail'] = $_POST['givenMail'];
     
     
     try {
-            $stm = $DBH->prepare("INSERT into Ticket_Info (firstname, lastname, email) VALUES(:firstname, :lastname, :email);");
+            $stm = $DBH->prepare("INSERT into Ticket_Info (firstname, lastname, email, referencenum) VALUES(:firstname, :lastname, :email, :referencenum);");
              if ($stm->execute($data)) {
                 //$_SESSION['name'] = $data['name'];
                 //$_SESSIN['email'] = $data['email'];

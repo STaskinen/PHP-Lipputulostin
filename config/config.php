@@ -48,7 +48,25 @@ function getTicketnum($fname, $lname) {
         }
 }
 
+function viitenumero($laskunro){
+    if(strlen($laskunro) > 19) return 0;
+    $kertoimet = array('7','3','1','7', '3','1','7','3','1','7','3','1','7','3','1','7','3','1','7');
+    $tarkiste = 0;
+    $j = 0;
+    $tmp = $laskunro;
+    settype($tmp, "string");
+    for($i=strlen($tmp)-1; $i>-1; $i--){
+        $tarkiste = $tarkiste + $kertoimet[$j++] * intval(substr($tmp, $i, 1));
+     }
+     $tarkiste = ceil($tarkiste / 10) * 10 - $tarkiste;
+     $viite = "$laskunro$tarkiste";
+    return $viite;
 
+}
+
+function random() {
+    return random_int(1000, 100000000);
+}
 
 
 //==== Turn on HTTPS - Detect if HTTPS, if not on, then turn on HTTPS:
