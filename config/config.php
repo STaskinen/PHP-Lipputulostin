@@ -48,6 +48,12 @@ function getTicketnum($fname, $lname) {
         }
 }
 
+
+function laskunumero() {
+    return random_int(100000, 999999);
+}
+
+
 function viitenumero($laskunro){
     if(strlen($laskunro) > 19) return 0;
     $kertoimet = array('7','3','1','7', '3','1','7','3','1','7','3','1','7','3','1','7','3','1','7');
@@ -63,11 +69,6 @@ function viitenumero($laskunro){
     return $viite;
 
 }
-
-function random() {
-    return random_int(1000, 100000000);
-}
-
 
 //==== Turn on HTTPS - Detect if HTTPS, if not on, then turn on HTTPS:
 
